@@ -17,6 +17,9 @@ public class JsonFileReader implements FileReader {
 	
 	@Override
 	public List<Entity> parse(String path) throws IOException {
+		if(path == null) {
+			throw new IllegalArgumentException("ERR01: input file path cannot be null.");
+		}
 		LinkedList<Entity> allRecordedEntity = new LinkedList<>();
 		List<String> allLineOfFIle = Files.readAllLines(Paths.get(path));
 		

@@ -23,8 +23,8 @@ public class JsonFileTest {
 	public void parseFile() throws IOException {
 		List<Entity> allEntity = jsonFile.parse("/Users/hvanpariya/junk/input");
 		assertTrue(allEntity.size() == 32);
-		assertTrue(allEntity.get(0).getLocation().getLongitude() == -6.043701f);
-		assertTrue(allEntity.get(0).getLocation().getLatitude() == 52.986375f);
+		assertTrue(allEntity.get(0).getLocation().getLongitude() == -6.043701);
+		assertTrue(allEntity.get(0).getLocation().getLatitude() == 52.986375);
 		assertTrue(allEntity.get(0).getId() == 12);
 		assertTrue(allEntity.get(0).getName().equals("Christina McArdle"));
 	}
@@ -32,6 +32,11 @@ public class JsonFileTest {
 	@Test(expected = IOException.class)
 	public void parseFileInvalid() throws IOException {
 		jsonFile.parse("");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void parseFileNull() throws IOException {
+		jsonFile.parse(null);
 	}
 
 }
