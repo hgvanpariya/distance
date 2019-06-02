@@ -1,10 +1,30 @@
 package org.distance.util.impl;
 
+import java.util.logging.Logger;
+
 import org.distance.bean.Location;
 
 public class LocationCalculator {
+	
+	Logger logger = Logger.getLogger(LocationCalculator.class.getName());
 
+	/**
+	 * This method will calculate the distance between two points represented with
+	 * {@code Location}
+	 * 
+	 * @param location1
+	 *            Instance of the {@code Location} which will represent the first
+	 *            point.
+	 * @param location2
+	 *            Instance of the {@code Location} which will represent the second
+	 *            point.
+	 * @return
+	 */
 	public int calculateDistance(Location location1, Location location2) {
+		if(location1 == null || location2 == null) {
+			logger.warning("ERR02: invalid input for the location. Location1=" + location1 + ", Location2=" + location2 );
+			throw new IllegalArgumentException("ERR02: invalid input for the location.");
+		}
 		double earthRadius = 6371;
 
 		double dLatitude = Math.toRadians(location2.getLatitude() - location1.getLatitude());
@@ -21,14 +41,6 @@ public class LocationCalculator {
 		int d = (int) (earthRadius * c);
 
 		return d;
-	}
-
-	public static void main(String[] args) {
-		LocationCalculator locationCalculator = new LocationCalculator();
-		Location location1 = new Location(52.986375f, -6.043701f);
-		Location location2 = new Location(51.92893f, -10.27699f);
-		int calculateDistance = locationCalculator.calculateDistance(location1, location2);
-		System.out.println(calculateDistance);
 	}
 
 }

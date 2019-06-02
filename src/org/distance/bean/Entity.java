@@ -46,4 +46,9 @@ public class Entity {
 		this.location = location;
 	}
 
+	@Override
+	public String toString() {
+		return "Entity [id=" + id + ", name=" + name + ", location=" + location + "]";
+	}
+	
 }
