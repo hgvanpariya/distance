@@ -29,7 +29,7 @@ public class JsonFileTest {
 		assertTrue(allEntity.get(0).getName().equals("Christina McArdle"));
 	}
 
-	@Test(expected = IOException.class)
+	@Test(expected = IllegalArgumentException.class)
 	public void parseFileInvalid() throws IOException {
 		jsonFile.parse("");
 	}
