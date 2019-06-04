@@ -21,8 +21,9 @@ public class Distance {
 	}
 
 	private static void usage() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Example: ");
+		System.out.println("mvn exec:java -Dexec.mainClass=org.distance.Distance -Dexec.args='/Users/hvanpariya/other/distance/customer.txt 53.339428 -6.257664 20' -q\n");
+		System.out.println("Please refer : https://github.com/hgvanpariya/distance");
 	}
 
 }
