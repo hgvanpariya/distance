@@ -4,6 +4,11 @@ import java.util.logging.Logger;
 
 import org.distance.bean.Location;
 
+/**
+ *  This class is responsible for calculating distance.
+ * @author hvanpariya
+ *
+ */
 public class LocationCalculator {
 	
 	Logger logger = Logger.getLogger(LocationCalculator.class.getName());
@@ -38,9 +43,9 @@ public class LocationCalculator {
 
 		double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-		int d = (int) (earthRadius * c);
+		int distance = (int) (earthRadius * c);
 
-		return d;
+		return distance;
 	}
 
 }

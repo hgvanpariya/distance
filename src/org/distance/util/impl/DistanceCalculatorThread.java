@@ -5,6 +5,11 @@ import java.util.Set;
 import org.distance.bean.Entity;
 import org.distance.bean.Location;
 
+/**
+ * This Class is responsible to perform distance calculation in multi-threaded environment.
+ * @author hvanpariya
+ *
+ */
 public class DistanceCalculatorThread implements Runnable {
 
 	Entity userDetails;

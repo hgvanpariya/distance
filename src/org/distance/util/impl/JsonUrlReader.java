@@ -12,6 +12,11 @@ import org.distance.util.InputReader;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ *  This class is responsible for reading JSON from URL.
+ * @author hvanpariya
+ *
+ */
 public class JsonUrlReader implements InputReader {
 
 	ObjectMapper objectMapper = new ObjectMapper();

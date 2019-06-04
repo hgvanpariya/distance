@@ -134,7 +134,7 @@ public class DistanceService {
 	}
 	
 	/**
-	 * This method will convert 
+	 * This method will convert {@link Entity} to Json {@link String} using {@link EntitySerializer}
 	 * @param checkNearbyCustomers
 	 * @return
 	 * @throws JsonProcessingException
@@ -153,6 +153,12 @@ public class DistanceService {
 		
 	}
 	
+	
+	/**
+	 * This method will print all the customers in new line.
+	 * @param nearbyCustomers
+	 * @throws JsonProcessingException
+	 */
 	public void printCustomers(Collection<String> nearbyCustomers) throws JsonProcessingException{
 		for (String eachCutomer : nearbyCustomers) {
 			System.out.println(eachCutomer);

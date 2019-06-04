@@ -8,9 +8,16 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 
+/**
+ * This class is responsible for converting {@link Entity} object to JSON.
+ * @author hvanpariya
+ *
+ */
 public class EntitySerializer extends StdSerializer<Entity> {
 
-	private static final long serialVersionUID = -613072616695561768L;
+
+	private static final long serialVersionUID = -8773151108277948268L;
+
 
 	public EntitySerializer() {
 		this(null);

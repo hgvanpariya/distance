@@ -11,6 +11,11 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 
+/**
+ * This class is responsible for converting JSON to {@link Entity} object.
+ * @author hvanpariya
+ *
+ */
 public class EntityDeserializer extends StdDeserializer<Entity> {
 
 	private static final long serialVersionUID = -613072616695561768L;
