@@ -90,7 +90,7 @@ mvn exec:java -Dexec.mainClass=org.distance.Distance -Dexec.args='http://s3.amaz
 Change location radius to 20kms.
 
 ```
-mvn exec:java -Dexec.mainClass=org.distance.Distance -Dexec.args='/Users/hvanpariya/other/distance/customer.txt 53.339428 -6.257664 20' -q
+mvn exec:java -Dexec.mainClass=org.distance.Distance -Dexec.args='<path>/customer.txt 53.339428 -6.257664 20' -q
 ```
 #### output: ( only one customer in 20kms range )
 ```
